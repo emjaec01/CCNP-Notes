@@ -1,0 +1,57 @@
+TASK7: The world of ENARSI:
+Assignment: Magpractice
+
+Network Adapater: VMNet8
+RAM: 16gb
+linuxRivan: root
+	   C1sc0123
+
+rm -r /etc/udev/rules.d/70-persistent-net.rules
+reboot
+
+GUI - use IP after reboot
+hayup lab
+devices -> turn on
+
+telnet using secure crt
+use ports using the handout
+
+bgp.he.net/AS4775#_graph4
+
+TASK8: Minimum skills for an ENCOR/ENARSI
+skill1: ipv4 Mastery
+gi1 = 10.100.53.101/19
+gi2 = 172.16.100.93/28
+
+CCNP crashcourse:
+ 
+
+alias exec bp show ip int brief | ex una
+alias exec sr show ip route
+alias exec cn show cdp nei
+alias exec sp show ip protocols
+
+Never work on good friday
+
+Task9: FHRP: FIRST HOP REDUNDANCY PROTOCOL:
+type1: hsrp: hot standby routing protocol
+primary usage: Cisco switches only. Cisco-proprietary
+
+@@d1:
+config t
+hostname CoreTAASpldt
+int vlan 1
+ standby 1 ip 10.51.1.6
+ standby 1 preempt
+ standby 1 priority 150
+ standby 1 track gi 0/1 60
+end
+
+@@d2:
+config t
+hostname CoreBABAcvrg
+int vlan 1
+ standby 1 ip 10.51.1.6
+ standby 1 preempt
+ standby 1 priority 100
+end
