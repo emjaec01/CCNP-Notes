@@ -1,0 +1,168 @@
+cd
+mkdir
+cd
+git clone https://github.com/rivancorp/encord1
+del encord1
+
+
+skill level check:
+Encor:
+network:
+ospf,ospfv3, bgp, eigrp, vrf, nat, firewall, wifi
+systems:
+web,dns,email,ftp, ssh, radius, tacacs
+coding: pyton, json, yml, ansible
+
+enarsi:
+advance network:
+ipv4/ipv6: ospf,ospfv3, bgp, eigrp, vrf, mpls, vpn
+
+
+bp = sh ip int brief | ex una
+
+
+types of wireless AP
+hindi nacocontrol = autonomous
+nacocontrol
+
+TASK3:ENCOR TRUNKING SKILLS:
+
+
+Taas/baba:
+config t
+int fa 0/10
+ !manual trunking
+ switchport trunk enc dot1Q
+ switchport mode trunk
+int fa 0/11
+ !dynamic trunking protocol - desirable
+ switchport mode dynamic desirable
+int fa 0/12
+ !dyanmic trunking protocol - auto
+ switchport mode dynamic auto
+ do sh int trunk
+
+baba
+config t
+int fa 0/10
+ !manual trunking
+ switchport trunk enc dot1Q
+ switchport mode trunk
+int fa 0/11
+ !dynamic trunking protocol - desirable
+ switchport mode dynamic desirable
+int fa 0/12
+ !dyanmic trunking protocol - auto
+ switchport mode dynamic desirable
+ do sh int trunk
+
+
+CCNP TASK3: VLAN TRUNKING PROTOCOL: create 1, create all
+taas/baba:
+config t
+ vtp domain ccnp
+ vtp password encor
+ vtp mode server
+ exit 
+
+!taas:
+config t
+vlan 10
+ name WIFI
+vlan 50 
+ name IPCAMERAVIDEO
+VLAN 100
+ name VOICEVLAN
+exit
+!baba:
+show vlan brief
+
+
+IP PHONE
+ip add
+subnet mask
+default router 1
+dns server 1
+tftp server 1
+
+config t
+ip dhcp excluded-add 10.51.1.1 10.51.1.100
+ip dhcp excluded-add 10.51.10.1 10.51.10.100
+ip dhcp excluded-add 10.51.50.1 10.51.50.100
+ip dhcp excluded-add 10.51.100.1 10.51.100.100
+ip dhcp pool VLAN1DATA
+ network 10.51.1.0 255.255.255.0
+ default-router 10.51.1.4
+ domain-name VLAN1DATA.COM
+ dns-server 10.51.1.10
+ option 150 ip 10.51.100.8
+ip dhcp pool VLAN10-WIFI
+ network 10.51.10.0 255.255.255.0
+ default-router 10.51.10.4
+ domain-name VLAN10-WIFI.COM
+ dns-server 10.51.1.10
+ option 150 ip 10.51.100.8 
+ip dhcp pool VLAN50-IPCAMERA
+ network 10.51.50.0 255.255.255.0
+ default-router 10.51.50.4
+ domain-name VLAN50-IPCAMERA.COM
+ dns-server 10.51.1.10
+ option 150 ip 10.51.100.8 
+ip dhcp pool VLAN100-VOIP
+ network 10.51.100.0 255.255.255.0
+ default-router 10.51.100.4
+ domain-name VLAN100-VOIP.COM
+ dns-server 10.51.1.10
+ option 150 ip 10.51.100.8 
+
+
+soft reset:
+settings , **#**
+
+
+VOICE
+
+*Oct  7 02:14:58.031: CEF-HWIDB: EDSP0 LES switching vector set to Null
+*Oct  7 02:14:58.031: CEF-HWIDB: EDSP0 LES switching vector set to CEF switching
+*Oct  7 02:14:58.035: %EDSP-6-IPV6_ENABLED: IPv6 on interface EDSP0 added.
+*Oct  7 02:14:58.375: %EDSP-6-IPV6_ENABLED: IPv6 on interface EDSP0.1 added.
+*Oct  7 02:14:58.375: %EDSP-6-IPV6_ENABLED: IPv6 on interface EDSP0.2 added.
+*Oct  7 02:14:58.375: %EDSP-6-IPV6_ENABLED: IPv6 on interface EDSP0.3 added.
+*Oct  7 02:14:58.379: %EDSP-6-IPV6_ENABLED: IPv6 on interface EDSP0.4 added.
+*Oct  7 02:14:58.379: %EDSP-6-IPV6_ENABLED: IPv6 on interface EDSP0.5 added.
+
+conf t
+telephony-service
+do sh telephony-service
+
+ip phone local
+4 digits = local
+6 digits = international
+
+TASK4: ENCOR IP TELEPHONY FUNDAMENTALS:
+
+steps na gawing dhcp server
+ip dhcp pool VLAN100-VOIP
+ network 10.51.100.0 255.255.255.0
+ default-router 10.51.100.4 
+ domain-name VLAN100-VOIP.COM
+ dns-server 10.51.1.10 
+ option 150 ip 10.51.100.8 
+CboreSWbaba#sh run | section dhcp
+
+Task5: Cisco Wireless Controller:
+
+admin
+C1sc0123
+how to config wireless controller, via GUI
+
+Task6: ENCOR: python + json:
+What is a json: java script object notation
+
+json file contains:
+key: value
+
+
+
+
+
