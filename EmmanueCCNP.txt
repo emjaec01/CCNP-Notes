@@ -1,3 +1,4 @@
+***Saving files from github using CMD***
 cd
 mkdir
 cd
@@ -5,7 +6,7 @@ git clone https://github.com/rivancorp/encord1
 del encord1
 
 
-skill level check:
+*skill level check:
 Encor:
 network:
 ospf,ospfv3, bgp, eigrp, vrf, nat, firewall, wifi
@@ -17,17 +18,15 @@ enarsi:
 advance network:
 ipv4/ipv6: ospf,ospfv3, bgp, eigrp, vrf, mpls, vpn
 
-
+*alias created in network device*
 bp = sh ip int brief | ex una
 
-
-types of wireless AP
+*types of wireless AP
 hindi nacocontrol = autonomous
 nacocontrol
 
-TASK3:ENCOR TRUNKING SKILLS:
 
-
+**TASK3:ENCOR TRUNKING SKILLS:
 Taas/baba:
 config t
 int fa 0/10
@@ -52,12 +51,13 @@ int fa 0/11
  !dynamic trunking protocol - desirable
  switchport mode dynamic desirable
 int fa 0/12
- !dyanmic trunking protocol - auto
+ !dyanmic trunking protocol - desirable
+ !para magkaroon ng trunking
  switchport mode dynamic desirable
  do sh int trunk
 
 
-CCNP TASK3: VLAN TRUNKING PROTOCOL: create 1, create all
+**CCNP TASK3: VLAN TRUNKING PROTOCOL: create 1, create all
 taas/baba:
 config t
  vtp domain ccnp
@@ -77,7 +77,7 @@ exit
 !baba:
 show vlan brief
 
-#CUCM
+***Take note on the important details to check in IP Phone***
 IP PHONE
 ip add
 subnet mask
@@ -85,6 +85,7 @@ default router 1
 dns server 1
 tftp server 1
 
+***Assigning IP Addresses in IP Phone***
 config t
 ip dhcp excluded-add 10.51.1.1 10.51.1.100
 ip dhcp excluded-add 10.51.10.1 10.51.10.100
@@ -115,11 +116,11 @@ ip dhcp pool VLAN100-VOIP
  dns-server 10.51.1.10
  option 150 ip 10.51.100.8 
 
-
+*Next Step after the configuration*
 soft reset:
 settings , **#**
 
-
+***Successful creation message***
 VOICE
 
 *Oct  7 02:14:58.031: CEF-HWIDB: EDSP0 LES switching vector set to Null
@@ -131,17 +132,18 @@ VOICE
 *Oct  7 02:14:58.379: %EDSP-6-IPV6_ENABLED: IPv6 on interface EDSP0.4 added.
 *Oct  7 02:14:58.379: %EDSP-6-IPV6_ENABLED: IPv6 on interface EDSP0.5 added.
 
+*CUCM-Call Manager*
 conf t
 telephony-service
 do sh telephony-service
 
+**Digits in IP Phone**
 ip phone local
 4 digits = local
 6 digits = international
 
-TASK4: ENCOR IP TELEPHONY FUNDAMENTALS:
-
-steps na gawing dhcp server
+**TASK4: ENCOR IP TELEPHONY FUNDAMENTALS:
+ !steps na gawing dhcp server
 ip dhcp pool VLAN100-VOIP
  network 10.51.100.0 255.255.255.0
  default-router 10.51.100.4 
@@ -150,15 +152,13 @@ ip dhcp pool VLAN100-VOIP
  option 150 ip 10.51.100.8 
 CboreSWbaba#sh run | section dhcp
 
-Task5: Cisco Wireless Controller:
-
+**Task5: Cisco Wireless Controller:
 admin
 C1sc0123
 how to config wireless controller, via GUI
 
-Task6: ENCOR: python + json:
+**Task6: ENCOR: python + json:
 What is a json: java script object notation
-
 json file contains:
 key: value
 
