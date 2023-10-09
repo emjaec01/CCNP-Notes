@@ -77,7 +77,7 @@ exit
 !baba:
 show vlan brief
 
-
+#CUCM
 IP PHONE
 ip add
 subnet mask
