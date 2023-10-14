@@ -1,0 +1,36 @@
+YT Notes
+
+Task1:
+Two rules of routing:
+R1: Ping DIKIT: only direct neighbors ping/connect- devices will ping if same wire! or same VLAN!
+R2: to Ping not DIKI: you need Routing! 
+
+use alias - most cli command that we need to get used to.
+
+sh ip route connected | inc C 
+	- to check the connected route that will be needed in routing.
+
+Task2:
+how to check if eigrp is running:
+show ip eigrp traffic
+show ip eigrp topology
+show ip route eigrp
+sho ip protocols
+
+Task3:
+Why do we need so many areas: for every area you can have a maximum of 50 routers
+**clear ip ospf process before pasting
+ 
+1. create your areas: =0 backbone:
+2. create loopback for stability test
+3. router ospf [process-id]: range 1-2,000,000
+
+int lo0
+	ip add 4.4.4.4 255.255.255.255
+router ospf 1
+10.1.1.8/30
+
+how to check if ospf is working:
+sh ip ospf database
+sh ip ospf neighbor
+sh ip route ospf
