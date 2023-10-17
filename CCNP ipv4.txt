@@ -31,7 +31,7 @@ conf t
 int e1/0
 no shut
 ip add 10.2.1.102 255.255.255.0
-ip route 0.0.0.0 0.0.0.0 10.2.1.1
+ip route 0.0.0.0 0.0.0.0 10.2.1.2
 
 
 EIGRP FUNDAMENTALS:
